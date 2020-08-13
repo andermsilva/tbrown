@@ -1,0 +1,22 @@
+{
+  "name": "tbrown",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "next",
+    "start": "next start",
+    "buid": "next buid"
+  },
+  "keywords": [],
+  "author": "Anderson Marques",
+  "license": "MIT",
+  "dependencies": {
+    "autoprefixer": "^9.8.6",
+    "next": "^9.5.1",
+    "postcss-import": "^12.0.1",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1",
+    "tailwindcss": "^1.6.2"
+  }
+}

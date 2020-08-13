@@ -1,0 +1,31 @@
+.font-geral{
+    color:rgb(2, 104, 2);
+}
+
+.central{
+position: relative;
+
+ width: 60%;
+ margin-left: 20%;
+ margin-top:4px;
+ z-index: 4;
+
+}
+
+.fotoH{
+
+   width: 30%;
+   
+}
+.fotoV{
+   
+    width: 40%;
+}
+.whats_logo{
+
+    width: 30px;
+    height: 15px;
+}
+.alLeft{
+   margin-left: 40%;
+}

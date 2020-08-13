@@ -1,0 +1,15 @@
+.wrapper{
+    width: 100%;
+    height: 80px;
+    background-color:#F4F5EE;
+    
+    
+}
+.block1{
+    
+}
+
+.logo{
+     height: 100px;
+    z-index: 10;
+}
