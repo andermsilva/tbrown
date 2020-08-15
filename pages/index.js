@@ -8,7 +8,7 @@ const Index =()=>{
          <div  className='flex py-4'> 
             <div className=' fotoV '>
             
-             <img  src='https://scontent.fppb2-1.fna.fbcdn.net/v/t1.0-9/117750249_633869967257931_7829578366392211998_n.jpg?_nc_cat=102&_nc_sid=8024bb&_nc_ohc=Yvb-6cVuIN4AX_pMxUH&_nc_ht=scontent.fppb2-1.fna&oh=870c168478c2ef065299dbd016ea067d&oe=5F59D161'/>
+             <img  src='/sofa.jpg'/>
                
             </div>
             <p className='flex-1 p-2  '>
@@ -17,7 +17,7 @@ const Index =()=>{
             </p>
             
             <div className='fotoH '>
-             <img  src='https://scontent.fppb2-1.fna.fbcdn.net/v/t1.0-9/117270704_633877120590549_4284452395455256522_n.jpg?_nc_cat=111&_nc_sid=8024bb&_nc_ohc=XeVZJ3yPlpwAX_DC0yo&_nc_ht=scontent.fppb2-1.fna&oh=0548b43335363b20d307f95c3c4b7272&oe=5F591F4B'/>
+             <img  src='brown1.jpg'/>
 
                
             </div>
