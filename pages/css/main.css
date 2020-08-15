@@ -1,5 +1,7 @@
 .font-geral{
     color:rgb(2, 104, 2);
+ 
+    
 }
 
 .central{
@@ -23,9 +25,37 @@ position: relative;
 }
 .whats_logo{
 
-    width: 30px;
-    height: 15px;
+    width: 35px;
+    height: 20px;
 }
 .alLeft{
    margin-left: 40%;
+  
 }
+.playvideo{
+   
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 35%;
+
+}
+.inputForm{
+    background-color:rgb(190, 255, 190);
+    display: block;
+    width: 50%;
+    padding-top: .8rem ;
+    padding-bottom: .8rem;
+    border-radius: 0.5rem;
+}
+.form{
+   display: block;
+   margin: auto;
+    width: 55%;
+}
+.spanBt{
+    margin-left: auto;
+    margin-right: auto;
+}
+
+  

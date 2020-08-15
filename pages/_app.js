@@ -16,7 +16,8 @@ const MyApp = ({Component, props})=>{
         <div className=' w-full ' >
            
             <div className='central'>
-                 <Component {...props}/>
+                <Component  {...props}/>
+                
             </div>
             <Footer/>
         </div> 

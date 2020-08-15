@@ -6,32 +6,35 @@ import Link from 'next/link';
 const Header =()=>{
 
     return(
-      <div  >
+      < >
         <div className='bg-green-100 h-20 absolute w-full -mt-20'>
-        <div className=' w-3/5 mx-auto z-30 relative'>
+        <div className={style.marg +' w-24 z-0 relative '}>
+             
+
              <Link href='/'>
                 <a> <img  className={style.logo} src='./logotbrown1.png' alt='BrownLimpe'/></a>
              </Link>
              
+             
           </div>
         
         </div>
-        <div className='  bg-green-200 retative w-full mt-20 z-10 text-green-800 shadow-md'>
+        <div className='  bg-green-200 retative w-full mt-20 z-40 text-green-800 shadow-md'>
             <div className='w-1/2 mx-auto text-center '>
 
-                <Link href='/agenda'>
-                  <a className='px-2' >Agenda</a>
+                <Link href='./sobre'>
+                  <a className='px-2 hover:underline' >Sobre</a>
                 </Link>
                 <Link href='/contato'>
-                  <a className='px-2'>Contato</a>
+                  <a className='px-2 hover:underline'>Contato</a>
                 </Link>
-                <Link href='/sobre'>
-                  <a className='px-2'>Sobre</a>
+                <Link href='/orcamento'>
+                  <a className='px-2 hover:underline'>Orçamento</a>
                 </Link>
             </div>
         </div> 
        
-      </div>   
+      </>   
 
     );
 }

@@ -10,6 +10,10 @@
 }
 
 .logo{
+    
      height: 100px;
     z-index: 10;
+}
+.marg{
+    margin-left: 20%;
 }
