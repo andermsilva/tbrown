@@ -24,11 +24,11 @@ const Orcamento=()=>{
                body: JSON.stringify(form)
            });
            const data = await response.json();
-           console.log(data);
+           console.log('dados',data);
           
-           router.push('/');
+          // router.push('/');
       }catch(err){
-
+        console.log('Erro',err)
       }
       
    }
