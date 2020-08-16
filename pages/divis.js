@@ -5,9 +5,17 @@ const Divis =()=>{
     const{ data, error} =useSWR('/api/get',fetcher)
 
     return(
-        <pre>!!
-            {JSON.stringify(data)}
-        </pre>
+        <div>
+
+            {!data && <pre>
+                Carregando...
+                </pre>
+            }
+            {!error && data && data.config && <pre>!!
+               {data.message}!!
+                </pre>
+            }
+        </div>
 
     );
 }
