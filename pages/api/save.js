@@ -10,14 +10,14 @@ const fromBase64 = value =>{
 export default async(req,resp)=>{
      
     console.log(JSON.parse(req.body));
-    console.log(fromBase64(process.env.SHEET_PRIVATE_KEY))
+   // console.log(fromBase64(process.env.SHEET_PRIVATE_KEY))
     resp.end(req.body);
 
      try{
         
         await doc.useServiceAccountAuth({
             client_email: process.env.SHEET_CLIENT_EMAIL,
-            private_key: fromBase64(process.env.SHEET_PRIVATE_KEY)
+            private_key: process.env.SHEET_PRIVATE_KEY
             
         });
         await doc.loadInfo();
