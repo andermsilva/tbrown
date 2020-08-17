@@ -57,5 +57,17 @@ position: relative;
     margin-left: auto;
     margin-right: auto;
 }
+.block1{
+   position: relative;
+    display: block;
+}
+@media(max-width:678px){
+    .menu{
+        
+        font-size: 9px;
+    }
+    .font-geral{
+        font-size: 8px;
+    }
 
-  
+}

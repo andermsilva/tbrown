@@ -19,8 +19,8 @@ const Header =()=>{
           </div>
         
         </div>
-        <div className='  bg-green-200 retative w-full mt-20 z-40 text-green-800 shadow-md'>
-            <div className='w-1/2 mx-auto text-center '>
+        <div className=' menu bg-green-200 retative w-full mt-20 z-40 text-green-800 shadow-md'>
+            <div className='w-1/2 mx-auto text-center'>
 
                 <Link href='./sobre'>
                   <a className='px-2 hover:underline' >Sobre</a>
@@ -29,7 +29,7 @@ const Header =()=>{
                   <a className='px-2 hover:underline'>Contato</a>
                 </Link>
                 <Link href='/orcamento'>
-                  <a className='px-2 hover:underline'>Orçamento</a>
+                  <a className={style.menu +'px-2 hover:underline'}>Orçamento</a>
                 </Link>
             </div>
         </div> 

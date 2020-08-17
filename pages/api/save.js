@@ -22,6 +22,7 @@ export default async(req,resp)=>{
              
             
         });
+        const hora = moment().subtract(2, 'hours')
         await doc.loadInfo();
         const sheet = doc.sheetsByIndex[0];
         const data = JSON.parse(req.body);
@@ -29,9 +30,10 @@ export default async(req,resp)=>{
             Nome:data.Nome,
             Whatsapp:data.Whatsapp,
             Email:data.Email,
-            'Data do pedido': moment().format('DD/MM/YYYY, HH:mm:ss') // August 15th 2020, 11:16:08 am
+            'Data do pedido': hora.format('DD/MM/YYYY, HH:mm:ss') // August 15th 2020, 11:16:08 am
         });
         resp.end(req.body); 
+        console.log(hora)
     }catch(err){
        console.log(err);
        resp.end('error')
