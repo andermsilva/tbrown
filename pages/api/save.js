@@ -22,7 +22,7 @@ export default async(req,resp)=>{
              
             
         });
-        const hora = moment().subtract(2, 'hours')
+        const hora = moment().subtract(3, 'hours')
         await doc.loadInfo();
         const sheet = doc.sheetsByIndex[0];
         const data = JSON.parse(req.body);
