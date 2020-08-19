@@ -29,7 +29,7 @@ const Header =()=>{
                   <a className='px-2 hover:underline'>Contato</a>
                 </Link>
                 <Link href='/orcamento'>
-                  <a className={style.menu +'px-2 hover:underline'}>Orçamento</a>
+                  <a className='px-2 hover:underline'>Orçamento</a>
                 </Link>
             </div>
         </div> 

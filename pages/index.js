@@ -1,39 +1,56 @@
 import React from 'react';
-
+import useSWR from 'swr';
+const fetcher=(...args)=> fetch(...args).then(resp => resp.json());
 
 const Index =()=>{
+    const{ data, error} =useSWR('/api/get',fetcher)
 
     return(
-      <div className='font-geral' >
-         <div  className='flex py-4'> 
-            <div className=' fotoV '>
-            
-             <img  src='/sofa.jpg'/>
-               
-            </div>
-            <p className='flex-1 p-2  '>
-                 Limpeza e higiênização de estofados rezidenciais e <br />
-                 colchões
-            </p>
-            
-            <div className='fotoH '>
-             <img  src='brown1.jpg'/>
+        <div >
 
-               
-            </div>
-            <p className='flex-1 p-2'> 
-                Serviço realizxado com produdos e equipamentos de<br />
-                qualidade comprovada.
-               </p>
+            {!data && <pre>
+                Carregando...
+                </pre>
+            }
+            {!error && data && data.config && <pre>!!
+               {data.message}!!
+                </pre>
+            }
+            <div  className='cor-texto py-4'> 
+                <div className=' fotoV block1 '>
+                     <img  src='/sofa.jpg'/>
+                </div>  
+                <div className='p-2 block1 '>
+                     <p >
+                        Limpeza e higiênização de estofados residenciais e
+                        colchões
+                    </p>
+                </div>
+            
+                <div className='fotoH block1 '>
+                     <img  src='brown1.jpg'/>
+                </div>
+                <div className='p-2 block1'>
+                    <p> 
+                        Serviço realizado com produdos e equipamentos de
+                        qualidade comprovada.
+                    </p>
+
+                </div>
 
          </div>
-         <div className=' py-2 flex alLeft text-2x1  text-green-800'>
-           
-         <a className='hover:underline' href='https://api.whatsapp.com/send?phone=5518997240015 ' target='blank'> Contato: (18) 99724-0015  </a>
-             <a href='https://api.whatsapp.com/send?phone=555518997240015&text=TBROWNLIMPE' target='blank'><img className='whats_logo flex-2 ' src='/whatsApp.png'/> </a> 
-          
-         </div>
-      </div>
+
+            <div className='  bt-contato'>
+             <div>
+                 <a className='align-contato'  href='https://api.whatsapp.com/send?phone=5518997240015 ' target='blank'> Contato: (18) 99724-0015 </a> 
+             </div> 
+              <div>
+                  <img className='whats_logo' src='/whatsapp-logo.png'/>
+              </div>
+            </div>
+        </div>
+
     );
 }
+
 export default Index;

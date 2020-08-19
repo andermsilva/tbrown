@@ -1,52 +1,73 @@
-import React from 'react';
-import useSWR from 'swr';
-const fetcher=(...args)=> fetch(...args).then(resp => resp.json())
+import React ,{useState}from 'react';
+import {useRouter} from 'next/router';
+import PageTitle from '../components/Header/PageTitle';
+
 const Divis =()=>{
-    const{ data, error} =useSWR('/api/get',fetcher)
+    const router = useRouter();
+    const [form ,setForm] = useState({
+        Nome:'',
+        Whatsapp:'',
+        Email:''
+    });
+  
+   const save =async()=>{
+     /*   const form ={
+        Nome:'dddd',
+        Whatsapp:'ffff',
+        Email:'ffff' 
+       } */
+      try{
 
-    return(
-        <div>
-
-            {!data && <pre>
-                Carregando...
-                </pre>
-            }
-            {!error && data && data.config && <pre>!!
-               {data.message}!!
-                </pre>
-            }
-            <div  className='texto py-4'> 
-                <div className=' fotoV block1 '>
-                     <img  src='/sofa.jpg'/>
-                </div>  
-                <div className='p-2 block1 '>
-                     <p >
-                        Limpeza e higiênização de estofados rezidenciais e <br />
-                        colchões
-                    </p>
-                </div>
-            
-                <div className='fotoH block1 '>
-                     <img  src='brown1.jpg'/>
-                </div>
-                <div className=' texto p-2 block1'>
-                    <p> 
-                        Serviço realizxado com produdos e equipamentos de<br />
-                        qualidade comprovada.
-                    </p>
-
-                </div>
-
-         </div>
-
-         <div className=' py-2 flex alLeft text-2x1  text-green-800'>
-           
-         <a className='hover:underline' href='https://api.whatsapp.com/send?phone=5518997240015 ' target='blank'> Contato: (18) 99724-0015  </a>
-             <a href='https://api.whatsapp.com/send?phone=555518997240015&text=TBROWNLIMPE' target='blank'><img className='whats_logo flex-2 ' src='/whatsApp.png'/> </a> 
+          const response = await fetch('/api/save',{
+               method:'POST',
+              // headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
+               body: JSON.stringify(form)
+           });
+           const data = await response.json();
+          // console.log('dados',data);
           
-         </div>
-        </div>
+          router.push('/');
+      }catch(err){
+        console.log('Erro',err)
+      }
+      
+   }
 
+    const onChange = evt =>{
+        const value =evt.target.value;
+        const key = evt.target.name;
+        setForm(old => ({
+                ...old,
+                [key]: value
+
+               }));
+    }
+    return(
+
+        <div >
+            <PageTitle title='Orçamento'/>
+            <h1 className='text-center font-bold text-green-800 text-2xl'>Solicite um Orçamento</h1>
+            <div >
+                <lable className='margin-label cor-texto' for='Nome'>Nome:</lable>
+                <input onChange={onChange} type='text' name='Nome' value={form.Nome}  placeholder='Nome' className='inputForm' />
+               
+                <lable  className='margin-label cor-texto'>Whatsapp:</lable>
+                <input onChange={onChange}  type='text' name='Whatsapp' value={form.Whatsapp}  placeholder='Whatsapp' className='inputForm' />
+                 
+                <lable className='margin-label cor-texto'>E-mail:</lable>
+                <input onChange={onChange}  type='text' name='Email' value={form.Email}  placeholder='E-mail' className='inputForm' />
+                <pre>
+                  {/*   {JSON.stringify(form,null,2)} */}
+                </pre>
+             
+                 <div className='bt-orcamento'>
+
+                  <button  onClick={save} className='bt px-12 py-4 font-bold rounded-lg shadow-lg hover:shadow  my-2 '> Enviar</button>
+                 </div>
+             
+            
+            </div>
+        </div>
     );
 }
 

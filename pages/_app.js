@@ -1,7 +1,8 @@
 import React from 'react';
 import Link from 'next/link'
 import '../css/styles.css';
-import  './css/main.css'
+import  './css/main.css';
+
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 
@@ -13,7 +14,7 @@ const MyApp = ({Component, props})=>{
             <Header />
        
          
-        <div className=' w-full ' >
+        <div className=' w-full' >
            
             <div className='central'>
                 <Component  {...props}/>

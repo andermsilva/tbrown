@@ -15,23 +15,17 @@ position: relative;
 }
 
 .fotoH{
-
-   width: 30%;
+    margin-left: auto;
+    margin-right: auto; 
+    width: 95%;
    
 }
 .fotoV{
-   
-    width: 40%;
+    margin-left: auto;
+    margin-right: auto;
+    width: 95%;
 }
-.whats_logo{
 
-    width: 35px;
-    height: 20px;
-}
-.alLeft{
-   margin-left: 40%;
-  
-}
 .playvideo{
    
     display: block;
@@ -42,8 +36,10 @@ position: relative;
 }
 .inputForm{
     background-color:rgb(190, 255, 190);
+    margin-left: auto;
+    margin-right: auto;
     display: block;
-    width: 50%;
+    width: 95%;
     padding-top: .8rem ;
     padding-bottom: .8rem;
     border-radius: 0.5rem;
@@ -53,21 +49,66 @@ position: relative;
    margin: auto;
     width: 55%;
 }
-.spanBt{
-    margin-left: auto;
-    margin-right: auto;
-}
+
 .block1{
    position: relative;
     display: block;
 }
+.cor-texto{
+     color: rgb(20, 97, 20);
+}
+.bt-contato{
+    background-color:rgb(40, 173, 40);
+    color: rgb(198, 240, 198);
+    font-weight: bold;
+    text-align: center;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+  
+}
+.bt-orcamento{
+    
+    text-align: center;
+}
+.bt{
+    background-color:rgb(40, 173, 40);  
+}
+.align-contato{
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+   
+ }
+ .whats_logo{
+    position: relative;
+    float: right;
+    margin-top: -21px;
+    margin-right: 34px;
+    z-index: 5;
+    width: 25px;
+    height: 22px;
+}
+
+.backg{
+    background-color:rgb(255, 175, 175);
+ }
+
+.margin-label{
+    margin-left: 12px;
+}
+
+
 @media(max-width:678px){
-    .menu{
+    /* .menu{
         
         font-size: 9px;
-    }
+    } */
     .font-geral{
         font-size: 8px;
+    }
+    .central{
+        width: 100%;
+        margin-left: 0;
     }
 
 }

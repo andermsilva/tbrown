@@ -1,6 +1,5 @@
 import React ,{useState}from 'react';
 import {useRouter} from 'next/router';
-import Link from 'next/link';
 import PageTitle from '../components/Header/PageTitle';
 
 const Orcamento=()=>{
@@ -45,25 +44,27 @@ const Orcamento=()=>{
     }
     return(
 
-        <div className='w-1/2 mx-auto'>
+        <div >
             <PageTitle title='Orçamento'/>
             <h1 className='text-center font-bold text-green-800 text-2xl'>Solicite um Orçamento</h1>
-            <div>
-                <lable>Nome:</lable>
-                <input onChange={onChange} type='text' name='Nome' value={form.Nome}   placeholder='Nome' className='inputForm' />
+            <div >
+                <lable className='margin-label cor-texto' for='Nome'>Nome:</lable>
+                <input onChange={onChange} type='text' name='Nome' value={form.Nome}  placeholder='Nome' className='inputForm' />
                
-                <lable >Whatsapp:</lable>
+                <lable  className='margin-label cor-texto'>Whatsapp:</lable>
                 <input onChange={onChange}  type='text' name='Whatsapp' value={form.Whatsapp}  placeholder='Whatsapp' className='inputForm' />
                  
-                <lable >E-mail:</lable>
+                <lable className='margin-label cor-texto'>E-mail:</lable>
                 <input onChange={onChange}  type='text' name='Email' value={form.Email}  placeholder='E-mail' className='inputForm' />
                 <pre>
                   {/*   {JSON.stringify(form,null,2)} */}
                 </pre>
-               <span className='spanBt'>
+             
+                 <div className='bt-orcamento'>
 
-                <button onClick={save} className='bg-green-400 px-12 py-4 font-bold rounded-lg shadow-lg hover:shadow  my-2 mx-auto'> Enviar</button>
-               </span>
+                  <button  onClick={save} className='bt px-12 py-4 font-bold rounded-lg shadow-lg hover:shadow  my-2 '> Enviar</button>
+                 </div>
+             
             
             </div>
         </div>
